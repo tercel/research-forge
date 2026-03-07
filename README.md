@@ -1,0 +1,53 @@
+# Research Forge
+
+Project due diligence & investment analysis skill for Claude Code.
+
+Perform deep analysis on technical projects (open-source repos, startups, SaaS products) across business, technical, and investment dimensions — then generate structured, actionable reports.
+
+## Quick Start
+
+```bash
+# Full auto-chain pipeline (scan → analyze → report)
+/research-forge https://github.com/example/project
+/research-forge ./my-local-project
+/research-forge ~/docs/README.md
+
+# Individual commands
+/research-forge:scan <target>              # Quick scan
+/research-forge:analyze <target>           # Deep 3-dimension analysis
+/research-forge:compare <target1> <target2> # Side-by-side comparison
+/research-forge:report <target>            # Formal report generation
+```
+
+## Target Types
+
+- **Remote URL** — `https://github.com/...`, any web address
+- **Local directory** — `/path/to/project`, `./my-project`
+- **Local file** — `./README.md`, `~/project/package.json`
+
+## Analysis Framework
+
+### Dimension 1: Business & Market (6 sub-dimensions)
+Problem Acuteness, Solution Fit, Business Model Clarity, Market Timing, Competitive Position, Adoption Momentum
+
+### Dimension 2: Technical & Architecture (6 sub-dimensions)
+Architecture Quality, Technical Moat, Engineering Culture, Scalability, Security Posture, Documentation
+
+### Dimension 3: Investment Thesis
+Bull Case, Bear Case, Team Assessment, Comparable Outcomes, Verdict
+
+## Rating System
+
+Each sub-dimension scored 1-5. Verdict: Strong Buy / Watch Closely / Hold / Pass.
+
+## Options
+
+| Flag | Description |
+|---|---|
+| `--lang zh\|en` | Output language (default: zh) |
+| `--focus business\|technical\|investment` | Deep-dive one dimension |
+| `--output path` | Custom report output path |
+
+## Output
+
+Reports saved to `./research-reports/[project-name]-due-diligence-[date].md` by default.
