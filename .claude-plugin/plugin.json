@@ -1,10 +1,12 @@
 {
   "name": "research-forge",
   "description": "Project Due Diligence & Investment Analysis Skill — perform deep technical and business analysis on open-source projects, startups, and SaaS products to generate structured due diligence reports.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "tercel",
-    "url": "https://github.com/tercel"
+    "email": "tercel.yi@gmail.com",
+    "url": "https://github.com/tercel",
+    "x": "https://x.com/tercelyi"
   },
   "license": "MIT",
   "keywords": [
