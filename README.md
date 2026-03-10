@@ -8,9 +8,10 @@ Perform deep analysis on technical projects (open-source repos, startups, SaaS p
 
 ```bash
 # Full auto-chain pipeline (scan → analyze → report)
-/research-forge https://github.com/example/project
-/research-forge ./my-local-project
-/research-forge ~/docs/README.md
+/research-forge:run                                    # Analyze current directory
+/research-forge:run https://github.com/example/project # Analyze remote project
+/research-forge:run ./my-local-project                 # Analyze local directory
+/research-forge:run --lang en                          # Output in English
 
 # Individual commands
 /research-forge:scan <target>              # Quick scan

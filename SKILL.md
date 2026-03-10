@@ -20,7 +20,7 @@ For local targets, data collection uses Read, Glob, Grep, and git history instea
 
 ## Command Mapping
 
-- `/research-forge <target>`: **Auto-Chain Pipeline** — automatically runs scan → analyze → report in one go. This is the primary usage.
+- `/research-forge:run [target]`: **Auto-Chain Pipeline** — automatically runs scan → analyze → report in one go. Defaults to current directory if no target specified. This is the primary usage.
 - `/research-forge:scan <target>`: Quick scan — gather metadata, key metrics, and first impressions.
 - `/research-forge:analyze <target>`: Full due diligence — deep analysis across all three dimensions.
 - `/research-forge:compare <target1> <target2> [target3...]`: Side-by-side comparison (can mix URLs and local paths).
@@ -28,7 +28,7 @@ For local targets, data collection uses Read, Glob, Grep, and git history instea
 
 ## Auto-Chain Pipeline
 
-When a target is provided directly to `/research-forge`, the system automatically executes the full pipeline without pausing:
+When `/research-forge:run` is invoked, the system automatically executes the full pipeline without pausing (target defaults to `.` if omitted):
 
 1. **Phase 1 — Scan**: Collect metadata, metrics, and first impressions
 2. **Phase 2 — Analyze**: Deep analysis across Business, Technical, and Investment dimensions with 1-5 ratings

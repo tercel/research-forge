@@ -1,18 +1,23 @@
 ---
-description: "Project due diligence — auto-chain full analysis pipeline, or show commands when no target provided."
-argument-hint: "[target] [--lang zh|en] [--output path]"
+description: "Project due diligence — auto-chain full analysis pipeline (default: current directory)."
+argument-hint: "[target] [--lang zh|en] [--output path] [--focus dimension]"
 allowed-tools: [Read, Glob, Grep, Write, Bash, WebFetch, WebSearch, Agent, AskUserQuestion]
 ---
 
-The user invoked `/research-forge:research-forge` with: $ARGUMENTS
+The user invoked `/research-forge:run` with: $ARGUMENTS
 
-## Routing Logic
+## Argument Parsing
 
-**If the user provided a target** (any argument that is NOT a flag starting with `--`), execute the **Full Auto-Chain Pipeline**.
+1. **Extract `--lang`**: If `--lang en` or `--lang zh` is present, use that language for output. Default: `zh` (Chinese Simplified).
+2. **Extract `--output`**: If `--output <path>` is present, use that path for the final report file.
+3. **Extract `--focus`**: If `--focus <dimension>` is present, note it for Phase 2.
+4. **Determine target**: Everything remaining (not a flag) is the target. **If no target is provided, default to the current working directory (`.`).**
+
+## Target Types
 
 A target can be:
 - **Remote URL**: `https://github.com/...`, `https://example.com`, etc.
-- **Local directory**: `/path/to/project`, `./my-project`, `~/Workspace/foo`
+- **Local directory**: `/path/to/project`, `./my-project`, `~/Workspace/foo`, or `.` (current directory, the default)
 - **Local file**: `/path/to/file.py`, `./README.md`, `~/project/package.json`
 
 ### Target Detection & Data Collection Strategy
@@ -68,38 +73,6 @@ Follow the `research-forge:report` skill exactly. Compile Phase 1 + Phase 2 into
 1. **Data handoff**: Each phase builds on data from previous phases. Maintain a running context of all collected data (metadata, metrics, ratings, assessments) across phases. Do NOT re-fetch, re-read, or re-analyze data already collected in earlier phases.
 2. Run the pipeline end-to-end without stopping for user input.
 3. Use sub-agents (Agent tool) to parallelize independent research tasks within each phase.
-4. Default output language is Chinese (Simplified) unless `--lang en` is specified.
+4. **Output language**: Use the language specified by `--lang` (default: `zh`, Chinese Simplified). When `--lang en` is specified, output in English. Use English for technical terms, product names, and metrics regardless of language setting.
 5. For local projects, supplement with WebSearch to gather external context (competitors, market landscape) when possible.
 6. **`--focus` parameter**: If `--focus` is specified, it applies ONLY to Phase 2 (Analyze) — the focused dimension gets a deep-dive while the other two dimensions receive summary-level analysis. Phase 1 (Scan) and Phase 3 (Report) are unaffected and run in full.
-
----
-
-**If NO target is provided** (no arguments, or only flags):
-
-Display the available commands:
-
-```
-Research Forge — Project Due Diligence & Investment Analysis
-
-Full Pipeline (auto-chain):
-  /research-forge <target>                Auto-run scan → analyze → report
-  /research-forge https://github.com/x/y  Analyze a remote project
-  /research-forge ./my-project             Analyze a local project directory
-  /research-forge ./README.md              Analyze from a local file
-  /research-forge <target> --lang en       Full pipeline in English
-  /research-forge <target> --output ./r.md Full pipeline with custom report path
-
-Individual Commands:
-  /research-forge:scan <target>            Quick scan — metadata + first impressions
-  /research-forge:analyze <target>         Deep analysis — 3 dimensions + verdict
-  /research-forge:compare <t1> <t2>        Side-by-side competitor comparison
-  /research-forge:report <target>          Generate formal due diligence report
-
-Options:
-  --lang zh|en          Output language (default: zh)
-  --focus dimension     Deep-dive one dimension (business|technical|investment)
-                        In auto-chain, applies to analyze phase only
-  --output path         Custom output path for reports
-
-Target can be: URL, local directory path, or local file path.
-```
