@@ -1,8 +1,8 @@
 # Research Forge
 
-Project due diligence & investment analysis skill for Claude Code.
+The "Deep Research" skill for projects — Codebase, Architecture, and Strategic analysis.
 
-Perform deep analysis on technical projects (open-source repos, startups, SaaS products) across business, technical, and investment dimensions — then generate structured, actionable reports.
+Perform comprehensive analysis on technical projects (open-source repos, commercial products, internal systems) across business, technical, and strategic dimensions — then generate structured, actionable reports.
 
 ## Quick Start
 
@@ -34,12 +34,12 @@ Problem Acuteness, Solution Fit, Business Model Clarity, Market Timing, Competit
 ### Dimension 2: Technical & Architecture (6 sub-dimensions)
 Architecture Quality, Technical Moat, Engineering Culture, Scalability, Security Posture, Documentation
 
-### Dimension 3: Investment Thesis
-Bull Case, Bear Case, Team Assessment, Comparable Outcomes, Verdict
+### Dimension 3: Strategic Verdict & Investment Thesis
+Bull Case, Bear Case, Team Assessment, Comparable Outcomes, Strategic Verdict, Investment Signal, Final Evaluation
 
 ## Rating System
 
-Each sub-dimension scored 1-5. Verdict: Strong Buy / Watch Closely / Hold / Pass.
+Each sub-dimension scored 1-5. Strategic Verdict: Strong Recommend / Watch Closely / Hold / Not Recommended. Investment Signal (optional): Strong Buy / Watch / Hold / Pass.
 
 ## Options
 

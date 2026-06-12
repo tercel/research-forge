@@ -60,12 +60,14 @@ Rate each sub-dimension (1-5):
 
 For local targets, the Technical dimension benefits from direct code reading — provide specific evidence from the codebase (file paths, code patterns, architecture observations).
 
-#### Phase 4: Investment Thesis
+#### Phase 4: Strategic Verdict & Investment Thesis
 - Construct the **Bull Case** (3-5 strongest arguments for success).
 - Construct the **Bear Case** (3-5 most significant risks).
 - Assess **Team** (if identifiable): background, track record, key-person risk.
 - Identify **Comparable Outcomes**: similar projects and their trajectories.
-- Produce **Verdict**: Strong Buy / Watch Closely / Hold / Pass.
+- Produce **Strategic Verdict**: Strong Recommend / Watch Closely / Hold / Not Recommended.
+- Produce **Investment Signal** (when applicable): Strong Buy / Watch / Hold / Pass.
+- Write a **Final Evaluation** paragraph synthesizing all dimensions.
 
 #### Phase 5: Output
 Generate a structured report with:

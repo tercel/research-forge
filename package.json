@@ -1,12 +1,13 @@
 {
   "name": "research-forge",
   "version": "0.1.0",
-  "description": "Project Due Diligence & Investment Analysis Skill — deep technical and business analysis for open-source projects, startups, and SaaS products.",
+  "description": "Deep Project Intelligence & Technical Due Diligence Skill — comprehensive analysis of architecture, codebase, and strategic positioning.",
   "keywords": [
     "due-diligence",
-    "investment-analysis",
+    "project-intelligence",
     "project-research",
     "technical-analysis",
+    "strategic-analysis",
     "market-research"
   ],
   "author": {

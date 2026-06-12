@@ -1,0 +1,3 @@
+description = "Quick scan of a project — gather metadata, key metrics, and first impressions. Supports URLs, local directories, and files."
+argument-hint = "<target> [--lang zh|en]"
+prompt = "Activating the research-forge skill: scan. Please perform a quick scan on the following target: {{args}}."

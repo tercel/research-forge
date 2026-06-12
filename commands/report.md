@@ -1,5 +1,5 @@
 ---
-description: "Generate a polished, investor-ready due diligence report. Supports URLs, local directories, and files."
+description: "Generate a polished, professional due diligence report. Supports URLs, local directories, and files."
 argument-hint: "<target> [--lang zh|en] [--output path]"
 allowed-tools: [Read, Glob, Grep, Write, Bash, WebFetch, WebSearch, Agent, AskUserQuestion]
 ---

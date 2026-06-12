@@ -60,12 +60,12 @@ Follow the `research-forge:scan` skill exactly. Collect:
 Follow the `research-forge:analyze` skill exactly. Using Phase 1 data as foundation:
 - Business & Market Analysis (6 sub-dimensions, each rated 1-5)
 - Technical & Architecture Analysis (6 sub-dimensions, each rated 1-5)
-- Investment Thesis (bull case, bear case, team, comparables)
+- Strategic Verdict & Investment Thesis (bull case, bear case, team, comparables)
 - Output the structured analysis with scorecard
 
 #### Phase 3: Formal Report
 Follow the `research-forge:report` skill exactly. Compile Phase 1 + Phase 2 into:
-- A polished, investor-ready due diligence report
+- A polished, professional due diligence report
 - Save to `./research-reports/[project-name]-due-diligence-[date].md` (or `--output` path if specified)
 - Inform the user of the saved file path
 

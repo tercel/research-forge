@@ -1,7 +1,7 @@
 ---
 name: report
 description: >
-  Generate a polished, investor-ready due diligence report. Supports remote URLs,
+  Generate a polished, professional due diligence report. Supports remote URLs,
   local directories, and local files as analysis targets.
 ---
 
@@ -58,7 +58,7 @@ Generate a formal document with the following sections:
 ### 3.5 Security & Reliability
 **Technical Score: X.X / 5.0**
 
-## 4. Investment Thesis
+## 4. Strategic Verdict & Investment Thesis
 ### 4.1 Bull Case
 ### 4.2 Bear Case / Key Risks
 ### 4.3 Team Assessment

@@ -1,0 +1,3 @@
+description = "Side-by-side comparison of 2+ competing projects. Supports mixing URLs and local paths."
+argument-hint = "<target1> <target2> [target3...] [--lang zh|en]"
+prompt = "Activating the research-forge skill: compare. Please perform a side-by-side comparison on the following projects: {{args}}."
