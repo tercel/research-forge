@@ -1,7 +1,7 @@
 {
   "name": "research-forge",
-  "description": "Deep Project Intelligence & Technical Due Diligence Skill — comprehensive analysis of architecture, codebase, and strategic positioning for open-source projects and commercial products.",
-  "version": "0.1.3",
+  "description": "Stage-Aware Project Intelligence & Strategic Due Diligence — evaluates open-source projects and commercial products against the criteria that matter at their lifecycle stage, from concept to market leader.",
+  "version": "0.2.0",
   "author": {
     "name": "tercel",
     "url": "https://github.com/tercel",

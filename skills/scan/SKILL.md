@@ -1,13 +1,14 @@
 ---
 name: scan
 description: >
-  Quick scan of a project — gather metadata, key metrics, and first impressions.
-  Supports remote URLs, local directories, and local files.
+  Quick scan of a project — gather metadata, key metrics, lifecycle stage
+  classification, and first impressions. Supports remote URLs, local
+  directories, and local files.
 ---
 
 # Research-Forge — Scan
 
-Quick reconnaissance scan of a project to gather key signals before a full analysis.
+Quick reconnaissance scan of a project to gather key signals and classify its lifecycle stage before a full analysis.
 
 ## Command: `/research-forge:scan`
 
@@ -49,13 +50,27 @@ Target can be a URL, local directory path, or local file path.
 - Dependencies: Key dependencies from manifest, dependency count, outdated signals.
 - Quality signals: Presence of CI config, linter config, test framework, documentation.
 
-#### 3. Qualitative First Impressions
+#### 3. Stage Classification (MANDATORY)
+
+Classify the project into a lifecycle stage per the Stage Model in the research-forge framework — this determines how the entire downstream analysis is weighted:
+
+- **S0 — Concept / Pre-launch**: No working product or prototype only; no real users; no releases or v0.0.x.
+- **S1 — PMF Search (0→1)**: Working product, early adopters, rapid iteration, little/no revenue.
+- **S2 — Scaling (1→10)**: Retention evidence, monetization live or forming, sustained growth, team beyond founders.
+- **S3 — Market Leadership (10→100)**: Category leader/top-3; third parties build on it; de-facto default choice.
+
+State the classification with:
+- 2-3 pieces of converging evidence (age, releases, adoption trajectory, revenue signals, ecosystem signals)
+- A confidence level (High / Medium / Low)
+- When torn between two stages, pick the earlier one — under-claiming maturity is the safer error.
+
+#### 4. Qualitative First Impressions
 - README quality: Is it clear, professional, well-structured?
 - Documentation: Does it exist? Is it maintained?
 - Positioning: How does the project describe itself? What problem does it claim to solve?
 - Code organization: Is the structure clean and conventional for the language/framework?
 
-#### 4. Output Format
+#### 5. Output Format
 Produce a concise snapshot card:
 
 ```
@@ -68,6 +83,10 @@ Quick Stats:
   [Local]  Files: X | Source: X | Tests: X
   Last Commit: [Date] | Open Issues: X
   Language: [Lang] | License: [License]
+
+Lifecycle Stage: [S0/S1/S2/S3 — Name] (Confidence: High/Medium/Low)
+  Evidence: [2-3 converging signals]
+  One Question for this stage: [the stage's core question]
 
 First Impressions:
   [2-3 sentence summary]

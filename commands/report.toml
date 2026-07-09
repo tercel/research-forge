@@ -1,3 +1,0 @@
-description = "Generate a polished, professional due diligence report. Supports URLs, local directories, and files."
-argument-hint = "<target> [--lang zh|en] [--output path]"
-prompt = "Activating the research-forge skill: report. Please generate a formal due diligence report for the following project: {{args}}."

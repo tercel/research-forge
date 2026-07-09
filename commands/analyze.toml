@@ -1,3 +1,0 @@
-description = "Full due diligence analysis across business, technical, and investment dimensions. Supports URLs, local directories, and files."
-argument-hint = "<target> [--lang zh|en] [--focus business|technical|investment]"
-prompt = "Activating the research-forge skill: analyze. Please perform a full due diligence analysis on the following project: {{args}}."

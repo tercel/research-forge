@@ -1,3 +1,0 @@
-description = "Project due diligence — auto-chain full analysis pipeline (default: current directory)."
-argument-hint = "[target] [--lang zh|en] [--output path] [--focus dimension]"
-prompt = "Activating the research-forge skill: run. Please execute the full auto-chain research pipeline on the following target: {{args}}."

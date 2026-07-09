@@ -1,6 +1,6 @@
 ---
-description: "Full due diligence analysis across business, technical, and investment dimensions. Supports URLs, local directories, and files."
-argument-hint: "<target> [--lang zh|en] [--focus business|technical|investment]"
+description: "Stage-aware due diligence analysis across business, technical, and moat/strategy dimensions. Supports URLs, local directories, and files."
+argument-hint: "<target> [--lang zh|en] [--focus business|technical|strategy]"
 allowed-tools: [Read, Glob, Grep, Write, Bash, WebFetch, WebSearch, Agent, AskUserQuestion]
 ---
 

@@ -53,15 +53,18 @@ Follow the `research-forge:scan` skill exactly. Collect:
 - Project metadata (name, language, license, dates)
 - For remote targets: quantitative signals (stars, forks, contributors, activity)
 - For local targets: project structure, dependencies, test presence, git history stats
+- **Lifecycle stage classification (S0-S3)** with evidence and confidence — this drives all downstream scoring weights
 - README quality and first impressions
 - Output the Snapshot Card
 
 #### Phase 2: Deep Analysis
-Follow the `research-forge:analyze` skill exactly. Using Phase 1 data as foundation:
+Follow the `research-forge:analyze` skill exactly. Using Phase 1 data (including the stage classification) as foundation:
 - Business & Market Analysis (6 sub-dimensions, each rated 1-5)
 - Technical & Architecture Analysis (6 sub-dimensions, each rated 1-5)
-- Strategic Verdict & Investment Thesis (bull case, bear case, team, comparables)
-- Output the structured analysis with scorecard
+- Moat & Strategy Analysis (4 rated sub-dimensions + bull case, bear case, comparables)
+- Apply the stage weight profile: Critical ×2, Standard ×1, Context excluded from scoring
+- Produce verdict (Critical sub-dimension ≤ 2 caps it at Hold / Wait) + mandatory Kill Criteria
+- Output the structured analysis with stage-weighted scorecard
 
 #### Phase 3: Formal Report
 Follow the `research-forge:report` skill exactly. Compile Phase 1 + Phase 2 into:
